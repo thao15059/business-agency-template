@@ -1,5 +1,13 @@
 const menu = document.querySelector(".menu");
 const navbar = document.querySelector(".navbar");
+const navList = document.querySelectorAll(".nav-list a");
+
+navList.forEach((el) => {
+  el.addEventListener("click", () => {
+    navbar.classList.toggle("change");
+    menu.classList.toggle("change");
+  });
+});
 
 menu.addEventListener("click", () => {
   navbar.classList.toggle("change");
